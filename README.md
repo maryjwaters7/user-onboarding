@@ -13,7 +13,7 @@ Set Up The Project
  Create a component file called Form.js, import it into your App.js file, and place the component in your JSX there.
 
 
-STEP 1 - Create Your Advanced Form
+[x]STEP 1 - Create Your Advanced Form
 We want to create a form to onboard a new user to our system. We need at least the following pieces of information about our new user:
 
  Name
@@ -23,13 +23,13 @@ We want to create a form to onboard a new user to our system. We need at least t
  A Submit button to send our form data to the server.
 
 
-STEP 2 - Implement Form Validation and Error Messaging
+[ ]STEP 2 - Implement Form Validation and Error Messaging
 Form validation is one of the facets of an application that makes it feel polished and controlled from a user perspective. With that in mind, implement the following:
 
  Using Yup, set up at least two different validations along with custom error messages that will display on screen when validation fails.
 
 
-STEP 3 - Make a POST Request
+[ ]STEP 3 - Make a POST Request
 Being able to POST data is a key skill of any developer, no matter your skill level.
 
  Craft a POST request using axios that sends your form data to the following endpoint: https://reqres.in/api/users
@@ -37,7 +37,7 @@ Being able to POST data is a key skill of any developer, no matter your skill le
 (Note: For those that are curious, we're using reqres.in for this assignment's API. It's a free API that allows us to simulate a POST request for any data that we send it. Pretty awesome!)
 
 
-STEP 4 - Display Returned Data to Screen
+[ ]STEP 4 - Display Returned Data to Screen
 When you get your data back, you will want to do something with it, right? Let's display a list of users in our app.
 
  Set up a state property called users that is initialized with an empty array

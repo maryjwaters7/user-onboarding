@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import * as yup from 'yup'
+import * as yup from 'yup';
+import axios from 'axios';
 
 const formSchema = yup.object().shape({
     name: yup
@@ -39,6 +40,9 @@ const Form = props => {
         terms: ''
     });
 
+    //state for post request from axios
+    const [post, setPost] = useState([]);
+
     //state for button disabled or not
     const [buttonDisabled, setButtonDisabled] = useState(true);
 
@@ -50,6 +54,24 @@ const Form = props => {
             setButtonDisabled(!valid);
         });
     });
+
+    const formSubmit = e => {
+        e.preventDefault();
+        axios
+        .post('https://reqres.in/api/users', formState)
+        .then(res => {
+            setPost(res.data);
+            console.log('success', post);
+            //reset form if successful
+            setFormState({
+                name: '',
+                email: '',
+                password: '',
+                terms: ''
+            });
+        })
+        .catch(err => console.log(err.response));
+    };
 
     const validateChange = e => {
         yup
@@ -131,6 +153,9 @@ const Form = props => {
                     onChange={inputChange}
                 />
             </label>
+
+            <pre>{JSON.stringify(post, null, 2)}</pre>
+            
             <button type='submit' disabled={buttonDisabled}>
                 Submit Form
             </button>

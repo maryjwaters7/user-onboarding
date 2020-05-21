@@ -23,13 +23,13 @@ We want to create a form to onboard a new user to our system. We need at least t
  A Submit button to send our form data to the server.
 
 
-[ ]STEP 2 - Implement Form Validation and Error Messaging
+[x]STEP 2 - Implement Form Validation and Error Messaging
 Form validation is one of the facets of an application that makes it feel polished and controlled from a user perspective. With that in mind, implement the following:
 
  Using Yup, set up at least two different validations along with custom error messages that will display on screen when validation fails.
 
 
-[ ]STEP 3 - Make a POST Request
+[x]STEP 3 - Make a POST Request
 Being able to POST data is a key skill of any developer, no matter your skill level.
 
  Craft a POST request using axios that sends your form data to the following endpoint: https://reqres.in/api/users
